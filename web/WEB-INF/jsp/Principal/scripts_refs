@@ -1,0 +1,12 @@
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="<c:url value="lib/jquery-3.2.1.min.js"></c:url>"></script>
+        <script src="<c:url value="lib/popper.min.js"></c:url>"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="<c:url value="lib/bootstrap/js/bootstrap.min.js"></c:url>"></script>
+        <script src="<c:url value="lib/selectric/jquery.selectric.js"></c:url>"></script>
+        <script src="<c:url value="lib/swiper/js/swiper.min.js"></c:url>"></script>
+        <script src="<c:url value="lib/aos/aos.js"></c:url>"></script>
+        <script src="<c:url value="lib/Magnific-Popup/jquery.magnific-popup.min.js"></c:url>"></script>
+        <script src="<c:url value="lib/sticky-sidebar/ResizeSensor.min.js"></c:url>"></script>
+        <script src="<c:url value="lib/sticky-sidebar/theia-sticky-sidebar.min.js"></c:url>"></script>
+        <script src="<c:url value="lib/lib.js"></c:url>"></script>
