@@ -14,13 +14,16 @@ import org.springframework.web.servlet.ModelAndView;
  */
 
 @Controller
-public class PrincipalControlador {
+public class IngresarControlador {
     
     @RequestMapping
-    ModelAndView Principal(){
+    ModelAndView Ingresar(){
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("Principal/Principal");
+        mav.setViewName("Ingresar/Ingresar");
         return mav;
     }        
+    
+    
+    
     
 }

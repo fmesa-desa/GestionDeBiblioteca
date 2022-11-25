@@ -18,12 +18,13 @@
             <props>
                 <prop key="index.htm">indexController</prop>
                 <prop key="Principal.htm">PrincipalControlador</prop>
+                <prop key="Ingresar.htm">IngresarControlador</prop>
             </props>
         </property>
     </bean>
     
     <bean name="PrincipalControlador" class="Controladores.PrincipalControlador" />
-
+    <bean name="IngresarControlador" class="Controladores.IngresarControlador" />
     
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
