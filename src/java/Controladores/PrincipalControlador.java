@@ -17,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class PrincipalControlador {
     
     @RequestMapping
-    ModelAndView Principal(){
+    public ModelAndView Principal(){
         ModelAndView mav = new ModelAndView();
         mav.setViewName("Principal/Principal");
         return mav;

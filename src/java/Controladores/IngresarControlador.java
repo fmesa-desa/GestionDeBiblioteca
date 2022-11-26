@@ -4,8 +4,11 @@
  */
 package Controladores;
 
+import Entidades.Admin;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -16,14 +19,20 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IngresarControlador {
     
-    @RequestMapping
-    ModelAndView Ingresar(){
+    @RequestMapping(method=RequestMethod.GET)
+    public ModelAndView Ingresar(){
         ModelAndView mav = new ModelAndView();
         mav.setViewName("Ingresar/Ingresar");
         return mav;
     }        
     
-    
+    @RequestMapping(method=RequestMethod.POST)
+    public ModelAndView RecuperarClave(){        
+        ModelAndView mav = new  ModelAndView();  
+        mav.setViewName("Ingresar/RecuperarClave");
+        
+        return mav;
+    }     
     
     
 }

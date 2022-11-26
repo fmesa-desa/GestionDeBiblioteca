@@ -1,4 +1,4 @@
-<footer id="footer" class="bg-light footer-light" style="position: absolute; bottom: 0px; width: 100%">
+<footer id="footer" class="bg-light footer-light" style="position: absolute; bottom: -100px; width: 100%">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -17,7 +17,7 @@
             <div class="col-lg-6">    
                 <br><br><br><br><br><br><br>
                 <h6>© 2023 fmesa-desa <span class="glyphicon glyphicon-globe"></span> rts-web</h6>
-                <a href="#" <strong>Todos los derechos reservados.</strong></a>                
+                <a href="#"><strong>Todos los derechos reservados.</strong></a>                
             </div>
         </div>        
     </div>
