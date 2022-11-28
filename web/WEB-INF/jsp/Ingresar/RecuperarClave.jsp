@@ -17,8 +17,8 @@
     <body>        
         <%@include file="../Principal/Header.jspf" %>
         <div class="container">
-            <%@include file="../recursos/EnConstruccion.jspf"%>
-            Correo = <%=request.getParameter("Correo")%>
+            <%@include file="../recursos/EnConstruccion.jspf"%>            
+            
         </div> 
         <%@include file="../Principal/Footer.jspf" %> 
         <%@include file="../recursos/scripts_refs" %>

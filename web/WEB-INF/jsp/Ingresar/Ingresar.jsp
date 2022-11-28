@@ -24,23 +24,24 @@
                             <li role="presentation" class="nav-item"><a class="nav-link active" href="#">Ingresar al sistema</a></li>                            
                         </ul>
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="login">
-                                <form action="RecuperarClave.htm" method="post">
+                            <div role="tabpanel" class="tab-pane active" id="login">                                
+                                <form:form method="post" commandName="Admin">
                                     <div class="form-group">
-                                        <label for="correo">Correo Electronico</label>
-                                        <input type="email" id="correo" class="form-control form-control-lg" placeholder="Correo...">
+                                        <form:label path="Correo">Correo:</form:label>
+                                        <form:input type="email" path="Correo" class="form-control form-control-lg" placeholder="Correo?" />
+                                        <form:errors path="Correo" element="div" class="alert alert-danger" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="clave">Clave</label>
-                                        <input type="password" id="clave" class="form-control form-control-lg" placeholder="Clave...">
+                                        <form:label path="Clave">Clave:</form:label>
+                                        <form:input type="password" path="Clave" class="form-control form-control-lg" placeholder="Clave?" />
                                     </div>
-                                    <p class="text-lg-right"><a href="#">Me olvide la contraseña???</a></p>
+                                    <p class="text-lg-right"><a href="forgot-password.html">Olvide la clave</a>&nbsp;<span class="glyphicon glyphicon-question-sign"></span></p>
                                     <div class="checkbox">
                                         <input type="checkbox" id="remember_me">
-                                        <label for="remember_me">Recordarme por favor!</label>
+                                        <label for="remember_me">Recordarme</label><span class="glyphicon glyphicon-info-sign"></span>
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-lg">Ingresar!</button>
-                                </form>                                                                    
+                                    <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+                                </form:form>                               
                             </div>
                         </div>
                         <div> </div>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Eclipse Metro/2.4.8 (RELEASE-2.4.8-e044505; 2022-01-04T13:29:23+0000) JAXWS-RI/2.3.5 JAXWS-API/2.3.3 JAXB-RI/2.3.5 JAXB-API/2.3.3 git-revision#e044505. --><xs:schema xmlns:tns="http://Servicios/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Servicios/">
+
+<xs:element name="BuscarAdmin" type="tns:BuscarAdmin"/>
+
+<xs:element name="BuscarAdminResponse" type="tns:BuscarAdminResponse"/>
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="LoginAdmin" type="tns:LoginAdmin"/>
+
+<xs:element name="LoginAdminResponse" type="tns:LoginAdminResponse"/>
+
+<xs:complexType name="BuscarAdmin">
+<xs:sequence>
+<xs:element name="Correo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:admin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="admin">
+<xs:sequence>
+<xs:element name="clave" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="nombreCompleto" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginAdmin">
+<xs:sequence>
+<xs:element name="Correo" type="xs:string" minOccurs="0"/>
+<xs:element name="Clave" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:admin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
