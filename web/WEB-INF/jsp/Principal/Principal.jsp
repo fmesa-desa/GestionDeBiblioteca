@@ -16,7 +16,7 @@
     <body>
         <%@include file="Header.jspf" %>
         <div class="container">
-            <%@include file="../recursos/EnConstruccion.jspf"%>
+            <%@include file="../recursos/EnConstruccion.jspf"%>            
         </div>        
         <%@include file="Footer.jspf" %>  
         <%@include file="../recursos/scripts_refs" %>
