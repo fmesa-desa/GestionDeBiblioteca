@@ -14,10 +14,8 @@
         <title>GestionDeBiblioteca | Principal</title>
     </head>
     <body>
-        <%@include file="Header.jspf" %>
-        <div class="container">
-            <%@include file="../recursos/EnConstruccion.jspf"%>            
-        </div>        
+        <%@include file="Header.jspf" %>       
+        <%@include file="../recursos/EnConstruccion.jspf"%>                         
         <%@include file="Footer.jspf" %>  
         <%@include file="../recursos/scripts_refs" %>
     </body>
