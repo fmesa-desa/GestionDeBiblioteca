@@ -22,5 +22,6 @@ public class PrincipalControlador {
         mav.setViewName("Principal/Principal");
         return mav;
     }        
+              
     
 }
