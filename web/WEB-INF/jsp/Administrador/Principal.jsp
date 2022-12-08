@@ -13,14 +13,13 @@
         <%@include file="../recursos/header_refs" %> 
         <title>Administrador | Principal</title>
     </head>
-    <body>       
-        <div id="main">         
-            <%@include file="Header.jspf" %>
-            <%@include file="../recursos/EnConstruccion.jspf"%>  
-            <div class="jumbotron">
-               INGRESO OK!               
-            </div>
-            <%@include file="Footer.jspf" %>
+    <body>                    
+        <div id="main">             
+            <%@include file="Header.jspf" %>         
+            PRUEBA!!!
+            <%=NombreCompleto%>
+            <button class="btn btn-primary btn-circle" id="to-top"><i class="fa fa-angle-up"></i></button>
+                <%@include file="Footer.jspf" %>
         </div>  
 
     </body>

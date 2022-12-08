@@ -22,6 +22,7 @@
                 <prop key="Ingresar.htm">IngresarControlador</prop>
                 <prop key="RecuperarClave.htm">IngresarControlador</prop>
                 <prop key="AdministradorPrincipal.htm">AdministradorControlador</prop>
+                <prop key="AdministradorSalir.htm">AdministradorControlador</prop>
             </props>
         </property>
     </bean>
@@ -30,8 +31,7 @@
     <bean name="ErrorControlador" class="Controladores.ErrorControlador" />
     <bean name="IngresarControlador" class="Controladores.IngresarControlador" />    
     <bean name="AdministradorControlador" class="Controladores.AdministradorControlador" />    
-    
-    
+        
     
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"

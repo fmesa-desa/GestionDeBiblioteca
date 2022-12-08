@@ -5,6 +5,7 @@
 package Controladores;
 
 import Validadores.AdministradorValidar;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -34,7 +35,7 @@ public class IngresarControlador {
     public ModelAndView Ingresar(
             @ModelAttribute("Administrador") Administrador _admin, 
             BindingResult result, SessionStatus status,
-            HttpServletResponse resp)
+            HttpServletRequest req, HttpServletResponse resp)
             throws Exception {
         ModelAndView mav = new ModelAndView();
 
@@ -51,7 +52,8 @@ public class IngresarControlador {
                 servicios.AdministradorWebService cliente = service.getAdministradorWebServicePort();
                 Administrador Admin = cliente.administradorLogin(_admin.getCorreo(), _admin.getClave());
 
-                if (Admin != null) {                                                           
+                if (Admin != null) {      
+                    req.getSession().setAttribute("Admin", Admin);                    
                     resp.sendRedirect("AdministradorPrincipal.htm");
                     return null;
                 } else {
