@@ -1,19 +1,13 @@
 <div id="content">
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col col-lg-8">
-        <div class="error-template text-center"> <i class="fa fa-rocket fa-5x text-muted animated zoomIn mb50"></i>
-          <h3 class="main-title centered"><span>Something cool is coming!</span></h3>
-          <div class="main-title-description">Join the waiting list for the beta. We keep you posted. </div>
-          <form class="form-horizontal">
-            <div class="input-group input-group-lg">
-              <input type="text" class="form-control" placeholder="Your Email address here">
-              <span class="input-group-btn">
-              <button class="btn btn-primary btn-lg" type="button">Notify Me!</button>
-              </span> </div>
-          </form>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-8">
+                <div class="error-template text-center"> <i class="fa fa-rocket fa-5x text-muted animated zoomIn mb50"></i>
+                    <h3 class="main-title centered"><span>Se viene algo muy cool</span></h3>
+                    <div class="main-title-description">Solo espera un poco más &nbsp;&nbsp;
+                        <i class="fa fa-clock-o fa-2x animated zoomInRight mb50"></i></div>          
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

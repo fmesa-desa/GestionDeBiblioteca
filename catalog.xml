@@ -2,4 +2,8 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://192.168.1.5:8080/GestionBiblioteca_Servicios/AdminWebServices?wsdl" uri="src/conf/xml-resources/web-service-references/AdminWebServices/wsdl/192.168.1.5_8080/GestionBiblioteca_Servicios/AdminWebServices.wsdl"/>
     <system systemId="http://192.168.1.5:8080/GestionBiblioteca_Servicios/AdminWebServices?xsd=1" uri="src/conf/xml-resources/web-service-references/AdminWebServices/wsdl/192.168.1.5_8080/GestionBiblioteca_Servicios/AdminWebServices.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/GestionBiblioteca_Servicios/AdministradorWebService?wsdl" uri="src/conf/xml-resources/web-service-references/AdministradorWebService/wsdl/localhost_8080/GestionBiblioteca_Servicios/AdministradorWebService.wsdl"/>
+    <system systemId="http://localhost:8080/GestionBiblioteca_Servicios/AdministradorWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/AdministradorWebService/wsdl/localhost_8080/GestionBiblioteca_Servicios/AdministradorWebService.xsd_1.xsd"/>
+    <system systemId="http://192.168.1.5:8080/GestionBiblioteca_Servicios/AdministradorWebService?wsdl" uri="src/conf/xml-resources/web-service-references/AdministradorWebService/wsdl/192.168.1.5_8080/GestionBiblioteca_Servicios/AdministradorWebService.wsdl"/>
+    <system systemId="http://192.168.1.5:8080/GestionBiblioteca_Servicios/AdministradorWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/AdministradorWebService/wsdl/192.168.1.5_8080/GestionBiblioteca_Servicios/AdministradorWebService.xsd_1.xsd"/>
 </catalog>

@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
@@ -21,11 +21,11 @@
                 <div class="row justify-content-md-center align-items-center">
                     <div class="col col-md-6  col-lg-5 col-xl-4">
                         <ul class="nav nav-tabs tab-lg" role="tablist">
-                            <li role="presentation" class="nav-item"><a class="nav-link active" href="#">Ingresar al sistema</a></li>                            
+                            <li role="presentation" class="nav-item"><a class="nav-link active" href="#">INGRESAR AL SISTEMA</a></li>                            
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="login">                                
-                                <form:form method="post" commandName="Admin">
+                                <form:form method="post" commandName="Administrador">
                                     <div class="form-group">
                                         <form:label path="Correo">Correo:</form:label>
                                         <form:input type="email" path="Correo" class="form-control form-control-lg" placeholder="Correo?" />
@@ -34,23 +34,26 @@
                                     <div class="form-group">
                                         <form:label path="Clave">Clave:</form:label>
                                         <form:input type="password" path="Clave" class="form-control form-control-lg" placeholder="Clave?" />
+                                        <form:errors path="Clave" element="div" class="alert alert-danger" />
                                     </div>
                                     <p class="text-lg-right"><a href="forgot-password.html">Olvide la clave</a>&nbsp;<span class="glyphicon glyphicon-question-sign"></span></p>
                                     <div class="checkbox">
                                         <input type="checkbox" id="remember_me">
                                         <label for="remember_me">Recordarme</label><span class="glyphicon glyphicon-info-sign"></span>
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
-                                </form:form>                               
+                                    <button type="submit" class="btn btn-primary btn-lg">Loguearse&nbsp;&nbsp;
+                                        <i class="fa fa-address-card-o"></i></button>
+                                    </form:form>                                     
                             </div>
-                        </div>
-                        <div> </div>
+                        </div>                        
                     </div>                   
                 </div>
-            </div>
+            </div>               
+            <%if (request.getAttribute("msje_error") != null) {
+            %>  <div class="alert alert-danger"><%=request.getAttribute("msje_error")%></div>   
+            <%} else if (request.getAttribute("msje") != null) {
+            %>  <div class="alert alert-info"><%=request.getAttribute("msje")%></div><%}%>              
         </div>
-
-        <%@include file="../Principal/Footer.jspf" %>        
-        <%@include file="../recursos/scripts_refs" %>
+        <%@include file="../Principal/Footer.jspf" %>                
     </body>
 </html>

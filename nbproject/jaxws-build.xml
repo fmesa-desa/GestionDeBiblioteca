@@ -26,21 +26,21 @@
             <isset property="conf.dir"/>
         </condition>
     </target>
-    <target name="wsimport-client-AdminWebServices" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/AdminWebServices"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/AdminWebServices" destdir="${build.generated.dir}/jax-wsCache/AdminWebServices" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/AdminWebServices/wsdl/192.168.1.5_8080/GestionBiblioteca_Servicios/AdminWebServices.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.1.5:8080/GestionBiblioteca_Servicios/AdminWebServices?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/AdminWebServices/wsdl/192.168.1.5_8080/GestionBiblioteca_Servicios/AdminWebServices.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/AdminWebServices"/>
+    <target name="wsimport-client-AdministradorWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/AdministradorWebService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/AdministradorWebService" destdir="${build.generated.dir}/jax-wsCache/AdministradorWebService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/AdministradorWebService/wsdl/192.168.1.5_8080/GestionBiblioteca_Servicios/AdministradorWebService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.1.5:8080/GestionBiblioteca_Servicios/AdministradorWebService?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/AdministradorWebService/wsdl/192.168.1.5_8080/GestionBiblioteca_Servicios/AdministradorWebService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/AdministradorWebService"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/AdminWebServices">
+            <fileset dir="${build.generated.dir}/jax-wsCache/AdministradorWebService">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-AdminWebServices" depends="-init-project">
+    <target name="wsimport-client-clean-AdministradorWebService" depends="-init-project">
         <delete dir="${build.generated.sources.dir}/jax-ws/servicios"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/AdminWebServices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/AdministradorWebService"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-AdminWebServices"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-AdministradorWebService"/>
 </project>

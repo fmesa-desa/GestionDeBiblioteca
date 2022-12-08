@@ -4,7 +4,8 @@
  */
 package Controladores;
 
-import Validadores.AdminValidar;
+import Validadores.AdministradorValidar;
+import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
-import servicios.Admin;
+import servicios.Administrador;
+import servicios.Exception_Exception;
 
 /**
- *
  * @author martin
  */
 @Controller
@@ -25,33 +26,45 @@ public class IngresarControlador {
     public ModelAndView Ingresar() {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("Ingresar/Ingresar");
-        mav.addObject("Admin", new Admin());
+        mav.addObject("Administrador", new Administrador());
         return mav;
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ModelAndView Ingresar(@ModelAttribute("Admin") Admin _admin, BindingResult result, SessionStatus status) throws Exception {
+    public ModelAndView Ingresar(
+            @ModelAttribute("Administrador") Administrador _admin, 
+            BindingResult result, SessionStatus status,
+            HttpServletResponse resp)
+            throws Exception {
+        ModelAndView mav = new ModelAndView();
+
         try {
             //validar los campos obligatorios!
-            AdminValidar _AdminValidar = new AdminValidar();
+            AdministradorValidar _AdminValidar = new AdministradorValidar();
             _AdminValidar.validate(_admin, result);
+
             if (result.hasErrors()) {
-                return new ModelAndView("Ingresar/Ingresar", "command", new Admin());
+                return new ModelAndView("Ingresar/Ingresar", "command", new Administrador());
             } else {
-                //test!
-                // consumir un WS para ver si se puede traer el 'admin' de prueba!?
-                servicios.AdminWebServices_Service service = new servicios.AdminWebServices_Service();
-                servicios.AdminWebServices _cliente = service.getAdminWebServicesPort();
-                _admin = _cliente.buscarAdmin(_admin.getCorreo());
-                if (_admin != null) {
-                    return new ModelAndView("Ingresar/Ingresar", "command", _admin);
+                //test login!          
+                servicios.AdministradorWebService_Service service = new servicios.AdministradorWebService_Service();
+                servicios.AdministradorWebService cliente = service.getAdministradorWebServicePort();
+                Administrador Admin = cliente.administradorLogin(_admin.getCorreo(), _admin.getClave());
+
+                if (Admin != null) {                                                           
+                    resp.sendRedirect("AdministradorPrincipal.htm");
+                    return null;
                 } else {
-                    return new ModelAndView();
+                    throw new Exception("Se produjo un error en el ingreso! Consulte a soporte del sistema.");
                 }
             }
         } catch (Exception ex) {
-            throw ex;
+            mav.addObject("msje_error", ex.getMessage());
+            mav.setViewName("Ingresar/Ingresar");
+            return mav;
         }
     }
+    
+    
 
 }

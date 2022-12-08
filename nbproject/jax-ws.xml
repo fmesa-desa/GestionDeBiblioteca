@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
-  <services/>
+  <services>
+  </services>
   <clients>
-    <client name="AdminWebServices">
-      <wsdl-url>http://192.168.1.5:8080/GestionBiblioteca_Servicios/AdminWebServices?wsdl</wsdl-url>
-      <local-wsdl-file>192.168.1.5_8080/GestionBiblioteca_Servicios/AdminWebServices.wsdl</local-wsdl-file>
+    <client name="AdministradorWebService">
+      <wsdl-url>http://192.168.1.5:8080/GestionBiblioteca_Servicios/AdministradorWebService?wsdl</wsdl-url>
+      <local-wsdl-file>192.168.1.5_8080/GestionBiblioteca_Servicios/AdministradorWebService.wsdl</local-wsdl-file>
       <package-name>servicios</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -22,7 +23,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://192.168.1.5:8080/GestionBiblioteca_Servicios/AdminWebServices?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://192.168.1.5:8080/GestionBiblioteca_Servicios/AdministradorWebService?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
@@ -35,4 +36,5 @@
       </wsimport-options>
     </client>
   </clients>
+  <jsr109>false</jsr109>
 </jax-ws>
