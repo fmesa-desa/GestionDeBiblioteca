@@ -52,9 +52,9 @@ public class IngresarControlador {
                 servicios.AdministradorWebService cliente = service.getAdministradorWebServicePort();
                 Administrador Admin = cliente.administradorLogin(_admin.getCorreo(), _admin.getClave());
 
-                if (Admin != null) {      
+                if (Admin != null) {                       
                     req.getSession().setAttribute("Admin", Admin);                    
-                    resp.sendRedirect("AdministradorPrincipal.htm");
+                    resp.sendRedirect(resp.encodeRedirectURL("AdministradorPrincipal.htm"));
                     return null;
                 } else {
                     throw new Exception("Se produjo un error en el ingreso! Consulte a soporte del sistema.");

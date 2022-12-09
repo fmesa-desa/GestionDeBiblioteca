@@ -21,10 +21,11 @@
 
 <xs:complexType name="administrador">
 <xs:sequence>
+<xs:element name="apellido" type="xs:string" minOccurs="0"/>
 <xs:element name="clave" type="xs:string" minOccurs="0"/>
 <xs:element name="correo" type="xs:string" minOccurs="0"/>
-<xs:element name="ID" type="xs:int"/>
-<xs:element name="nombreCompleto" type="xs:string" minOccurs="0"/>
+<xs:element name="imagen" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 

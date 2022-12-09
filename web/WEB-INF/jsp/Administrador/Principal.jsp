@@ -15,9 +15,7 @@
     </head>
     <body>                    
         <div id="main">             
-            <%@include file="Header.jspf" %>         
-            PRUEBA!!!
-            <%=NombreCompleto%>
+            <%@include file="Header.jspf" %>                     
             <button class="btn btn-primary btn-circle" id="to-top"><i class="fa fa-angle-up"></i></button>
                 <%@include file="Footer.jspf" %>
         </div>  
