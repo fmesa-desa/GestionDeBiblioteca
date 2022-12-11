@@ -24,13 +24,12 @@ public class AdministradorControlador {
         ModelAndView mav = new ModelAndView("Administrador/AltaPrestamo");
 
         try {
-            if (req.getSession().getAttribute("Admin") == null) {
-                resp.sendRedirect("Principal.htm");
-            }
-
+            if (req.getSession().getAttribute("Admin") == null) 
+                resp.sendRedirect("Principal.htm");            
+                        
             return mav;
         } catch (Exception ex) {
-            mav.addObject("masje_error", ex.getMessage());
+            mav.addObject("msje_error", ex.getMessage());
             return mav;
         }
     }
@@ -52,10 +51,13 @@ public class AdministradorControlador {
             
             return mav;
         } catch (Exception ex) {
-            mav.addObject("masje_error", ex.getMessage());
+            mav.addObject("msje_error", ex.getMessage());
             return mav;
         }
     }
+    
+  
+    
     
 
 }

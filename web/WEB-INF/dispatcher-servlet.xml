@@ -22,7 +22,8 @@
                 <prop key="RecuperarClave.htm">IngresarControlador</prop>
                 <prop key="AdministradorAltaPrestamo.htm">AdministradorControlador</prop>
                 <prop key="AdministradorSalir.htm">AdministradorControlador</prop>
-                <prop key="AdministradorAltaLibro.htm">AdministradorControlador</prop>                
+                <prop key="AdministradorAltaLibro.htm">AdministradorControlador</prop>   
+                <prop key="AdministradorAltaPrestamo.htm">AdministradorControlador</prop>             
             </props>
         </property>
     </bean>

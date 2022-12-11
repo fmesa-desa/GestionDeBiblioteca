@@ -22,7 +22,20 @@
     </div>
 </div>
 </div>
-</div>            
+</div>   
+<%
+    String Clase = "";String Msje = "";
+    if(request.getAttribute("msje_error")!=null){
+        Clase = "alert-danger";        
+        Msje = request.getAttribute("msje_error").toString();
+    }else if(request.getAttribute("msje")!=null){
+        Clase = "alert-success";        
+        Msje = request.getAttribute("msje").toString();
+    }
+%>
+<div class="alert <%=Clase%> text-center">
+    <strong><%=Msje%></strong>
+</div>
 <button class="btn btn-primary btn-circle" id="to-top"><i class="fa fa-angle-up"></i></button>
     <%@include file="Footer.jspf" %>
 </div>  

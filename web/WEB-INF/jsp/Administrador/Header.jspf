@@ -56,11 +56,19 @@
                                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                                                 <i class="fa fa-fw fa-book fa-2x"></i><strong style="font-size: 18px">Libros</strong></a>                                           
                                             <div class="dropdown-menu">
-                                                <a href="AltaLibro.htm" class="dropdown-item"><i class="fa fa-fw fa-plus-square-o"></i>Ingresar Libro</a>                        
+                                                <a href="AdministradorAltaLibro.htm" class="dropdown-item"><i class="fa fa-fw fa-plus-square-o"></i>Ingresar Libro</a>                        
                                                 <a href="#" class="dropdown-item"><i class="fa fa-fw fa-minus-square-o"></i>Eliminar Libro</a>                                                                                                
                                                 <a href="#" class="dropdown-item"><i class="fa fa-fw fa-pencil-square-o"></i>Modificar Libro</a>
                                             </div>
-                                        </li>                
+                                        </li>  
+                                        <li class="nav-item dropdown user-account">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                                <i class="fa fa-fw fa-user-circle-o fa-2x"></i><strong style="font-size: 18px">Usuarios Lectores</strong></a>                                           
+                                            <div class="dropdown-menu">
+                                                <a href="AltaLibro.htm" class="dropdown-item"><i class="fa fa-fw fa-plus-square-o"></i>Ingresar Usuario</a>                                                                                                                                                                        
+                                                <a href="#" class="dropdown-item"><i class="fa fa-fw fa-pencil-square-o"></i>Modificar Usuario</a>
+                                            </div>
+                                        </li> 
                                     </ul>
 
                                     <span class="list-group-item heading">Reportes y Listados</span>
