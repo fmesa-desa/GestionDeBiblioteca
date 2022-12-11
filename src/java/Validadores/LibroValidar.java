@@ -7,23 +7,25 @@ package Validadores;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import servicios.Administrador;
+import servicios.Libro;
 
-
-/**
- *
+/** 
  * @author martin
  */
-public class AdministradorValidar implements Validator {
+
+
+public class LibroValidar implements Validator{
 
     @Override
     public boolean supports(Class<?> type) {
-        return Administrador.class.isAssignableFrom(type);
+        return Libro.class.isAssignableFrom(type);
     }
-            
+
     @Override
-    public void validate(Object o, Errors errors) {        
-        ValidationUtils.rejectIfEmpty(errors, "Correo", "required.Correo","El campo 'Correo' es obligatorio");
-        ValidationUtils.rejectIfEmpty(errors, "Clave", "required.Clave","El campo 'Clave' es obligatorio");
+    public void validate(Object o, Errors errors) {
+        ValidationUtils.rejectIfEmpty(errors, "Asignatura", "required.Asignatura","El campo 'Asignatura' es obligatorio");
+        
     }
+    
+    
 }

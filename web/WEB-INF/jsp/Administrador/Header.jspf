@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="menu-content">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="AdministradorPrincipal.htm" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link" href="AdministradorAltaPrestamo.htm" role="button" aria-haspopup="true" aria-expanded="false">
                         Página Principal <span class="sr-only">(current)</span>
                     </a>                    
                 </li>
@@ -51,7 +51,17 @@
                             <div class="sidebar_inner">
                                 <div class="list-group no-border list-unstyled">
                                     <span class="list-group-item heading">Administrar Items</span>
-                                    <a href="ABMLibros.htm" class="active list-group-item"><i class="fa fa-book"></i> ABM Libros</a>
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item dropdown user-account">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                                <i class="fa fa-fw fa-book fa-2x"></i><strong style="font-size: 18px">Libros</strong></a>                                           
+                                            <div class="dropdown-menu">
+                                                <a href="AltaLibro.htm" class="dropdown-item"><i class="fa fa-fw fa-plus-square-o"></i>Ingresar Libro</a>                        
+                                                <a href="#" class="dropdown-item"><i class="fa fa-fw fa-minus-square-o"></i>Eliminar Libro</a>                                                                                                
+                                                <a href="#" class="dropdown-item"><i class="fa fa-fw fa-pencil-square-o"></i>Modificar Libro</a>
+                                            </div>
+                                        </li>                
+                                    </ul>
 
                                     <span class="list-group-item heading">Reportes y Listados</span>
                                     <a href="my_profile.html" class="list-group-item"><i class="fa fa-fw fa-bookmark-o"></i> Listados de Libros</a>
@@ -60,9 +70,4 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                    </div>                  

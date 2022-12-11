@@ -23,5 +23,8 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>redirect.jsp</welcome-file>
-    </welcome-file-list>        
+    </welcome-file-list>  
+    <error-page>        
+        <location>/WEB-INF/jsp/recursos/Error.jsp</location>
+    </error-page>    
 </web-app>

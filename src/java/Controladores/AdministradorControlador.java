@@ -16,25 +16,46 @@ import org.springframework.web.servlet.ModelAndView;
  *
  * @author martin
  */
-
-
 @Controller
 public class AdministradorControlador {
-    
+
     @RequestMapping(method = RequestMethod.GET)
-    ModelAndView AdministradorPrincipal(HttpServletRequest req, HttpServletResponse resp) throws IOException{                        
-        if(req.getSession().getAttribute("Admin") == null)                
-            resp.sendRedirect("Principal.htm");
-        
-        return new ModelAndView("Administrador/Principal");
+    ModelAndView AdministradorAltaPrestamo(HttpServletRequest req, HttpServletResponse resp) {
+        ModelAndView mav = new ModelAndView("Administrador/AltaPrestamo");
+
+        try {
+            if (req.getSession().getAttribute("Admin") == null) {
+                resp.sendRedirect("Principal.htm");
+            }
+
+            return mav;
+        } catch (Exception ex) {
+            mav.addObject("masje_error", ex.getMessage());
+            return mav;
+        }
     }
-    
+
     @RequestMapping(method = RequestMethod.GET)
-    ModelAndView AdministradorSalir(HttpServletRequest req, HttpServletResponse resp) throws IOException{
+    ModelAndView AdministradorSalir(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         req.getSession().removeAttribute("Admin");
         resp.sendRedirect("Principal.htm");
         return null;
     }
+
+    @RequestMapping(method = RequestMethod.GET)
+    ModelAndView AdministradorAltaLibro(HttpServletRequest req, HttpServletResponse resp) {
+        ModelAndView mav = new ModelAndView("Administrador/AltaLibro");
+
+        try {
+            if (req.getSession().getAttribute("Admin") == null)
+                resp.sendRedirect("Principal.htm");
+            
+            return mav;
+        } catch (Exception ex) {
+            mav.addObject("masje_error", ex.getMessage());
+            return mav;
+        }
+    }
     
-    
+
 }

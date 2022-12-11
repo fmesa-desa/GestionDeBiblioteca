@@ -35,6 +35,38 @@
         </wsimport-option>
       </wsimport-options>
     </client>
+    <client name="LibroWebService">
+      <wsdl-url>http://192.168.1.5:8080/GestionBiblioteca_Servicios/LibroWebService?wsdl</wsdl-url>
+      <local-wsdl-file>192.168.1.5_8080/GestionBiblioteca_Servicios/LibroWebService.wsdl</local-wsdl-file>
+      <package-name>servicios</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://192.168.1.5:8080/GestionBiblioteca_Servicios/LibroWebService?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
   </clients>
   <jsr109>false</jsr109>
 </jax-ws>

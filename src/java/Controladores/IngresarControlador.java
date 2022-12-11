@@ -54,7 +54,7 @@ public class IngresarControlador {
 
                 if (Admin != null) {                       
                     req.getSession().setAttribute("Admin", Admin);                    
-                    resp.sendRedirect(resp.encodeRedirectURL("AdministradorPrincipal.htm"));
+                    resp.sendRedirect(resp.encodeRedirectURL("AdministradorAltaPrestamo.htm"));
                     return null;
                 } else {
                     throw new Exception("Se produjo un error en el ingreso! Consulte a soporte del sistema.");

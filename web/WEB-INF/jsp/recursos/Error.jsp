@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
@@ -14,6 +13,9 @@
         <title>Página de Error</title>
     </head>
     <body>
+        <%
+            String Msje_Error = "Se produjo un error al consultar la pagina. Codigo de status = " + response.getStatus();            
+        %>
         <div id="content">
             <div class="container">
                 <div class="row justify-content-md-center">
@@ -22,7 +24,7 @@
                             <h3 class="main-title"><span>Ocurrio un error!!!</span></h3>
                             <div class="main-title-description">Ocurrio algún error con la aplicación</div>
                             <div class="alert alert-danger">
-                                <c:out value="Detalles del error: ${msje_error}"></c:out>
+                                <%=Msje_Error%>
                             </div>
                             <div class="error-actions"> <a href="Principal.htm" class="btn btn-primary btn-lg ml-2 mr-2 mb-3">Llévame a la página principal!</a> <a href="Principal.htm" class="btn btn-light btn-lg ml-2 mr-2 mb-3">Contactar a soporte</a> </div>
                         </div>

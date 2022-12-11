@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Eclipse Metro/2.4.8 (RELEASE-2.4.8-e044505; 2022-01-04T13:29:23+0000) JAXWS-RI/2.3.5 JAXWS-API/2.3.3 JAXB-RI/2.3.5 JAXB-API/2.3.3 git-revision#e044505. --><xs:schema xmlns:tns="http://Servicios/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Servicios/">
+
+<xs:element name="AltaLibro" type="tns:AltaLibro"/>
+
+<xs:element name="AltaLibroResponse" type="tns:AltaLibroResponse"/>
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:complexType name="AltaLibro">
+<xs:sequence>
+<xs:element name="Libro" type="tns:libro" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="libro">
+<xs:sequence>
+<xs:element name="asignatura" type="tns:libroAsignatura" minOccurs="0"/>
+<xs:element name="autor" type="tns:autor" minOccurs="0"/>
+<xs:element name="categoria" type="tns:libroCategoria" minOccurs="0"/>
+<xs:element name="comentarios" type="xs:string" minOccurs="0"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="disponible" type="xs:boolean" minOccurs="0"/>
+<xs:element name="editorial" type="xs:string" minOccurs="0"/>
+<xs:element name="estante" type="tns:ubicacionEstante" minOccurs="0"/>
+<xs:element name="foto" type="xs:string" minOccurs="0"/>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="ISBN" type="xs:string" minOccurs="0"/>
+<xs:element name="titulo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="libroAsignatura">
+<xs:sequence>
+<xs:element name="asignatura" type="xs:string" minOccurs="0"/>
+<xs:element name="ID" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="autor">
+<xs:sequence>
+<xs:element name="autorPais" type="tns:pais" minOccurs="0"/>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pais">
+<xs:sequence>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="pais" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="libroCategoria">
+<xs:sequence>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+<xs:element name="ID" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ubicacionEstante">
+<xs:sequence>
+<xs:element name="estante" type="xs:string" minOccurs="0"/>
+<xs:element name="ubicacionID" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AltaLibroResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
