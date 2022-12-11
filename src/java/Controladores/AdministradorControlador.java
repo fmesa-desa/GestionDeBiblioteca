@@ -6,6 +6,7 @@ package Controladores;
 
 import Validadores.LibroValidar;
 import java.io.IOException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
@@ -41,8 +42,8 @@ public class AdministradorControlador {
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView AdministradorSalir(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         req.getSession().removeAttribute("Admin");
-        
-        resp.sendRedirect("Principal.htm");
+        resp.addCookie(new Cookie("_sesion","false"));
+        resp.sendRedirect("Ingresar.htm");
         return null;
     }
 

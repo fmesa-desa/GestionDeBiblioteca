@@ -12,7 +12,7 @@
 <html>
     <head>
         <%@include file="../recursos/header_refs" %>        
-        <title>GestionDeBiblioteca | Recuperar Clave</title>
+        <title></title>
     </head>
     <body>        
         <%@include file="../Principal/Header.jspf" %>
@@ -20,7 +20,6 @@
             <%@include file="../recursos/EnConstruccion.jspf"%>            
             
         </div> 
-        <%@include file="../Principal/Footer.jspf" %> 
-        <%@include file="../recursos/scripts_refs" %>
+        <%@include file="../Principal/Footer.jspf" %>         
     </body>
 </html>

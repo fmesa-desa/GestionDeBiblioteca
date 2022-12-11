@@ -11,39 +11,36 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <%@include file="../recursos/header_refs" %>  
-</head>
+    <head>
+        <%@include file="../recursos/header_refs" %>  
+    </head>
     <body>
         <div id="main">        
-           
-           
-            
             <div class="container">
-    <div class="row justify-content-md-center">
-          <div class="col col-md-12 col-lg-10 col-xl-8">
-        
-        <div class="page-header">
+                <div class="row justify-content-md-center">
+                    <div class="col col-md-12 col-lg-10 col-xl-8">
+
+                        <div class="page-header">
+                        </div>
+                    </div>
+                </div>
             </div>
-      </div>
-    </div>
-  </div>
-<div id="content">
-  <div class="container">
-    <div class="row justify-content-md-center align-items-center">
-        
-        <div class="row">
-              
-               <img src="img/logo.jpg" class="img-fluid" alt=""> 
-            </div>
-        
-        
-          <div class="col col-md-6  col-lg-5 col-xl-4">
-        <ul class="nav nav-tabs tab-lg" role="tablist">
-          <li role="presentation" class="nav-item"><a class="nav-link active" href="#">Ingresar</a></li>
-          </ul>
-        <div class="tab-content">
-          <form:form method="post" commandName="Administrador">
+            <div id="content">
+                <div class="container">
+                    <div class="row justify-content-md-center align-items-center">
+
+                        <div class="row">
+
+                            <img src="img/logo.jpg" class="img-fluid" alt=""> 
+                        </div>
+
+
+                        <div class="col col-md-6  col-lg-5 col-xl-4">
+                            <ul class="nav nav-tabs tab-lg" role="tablist">
+                                <li role="presentation" class="nav-item"><a class="nav-link active" href="#">Ingresar</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <form:form method="post" commandName="Administrador">
                                     <div class="form-group">
                                         <form:label path="Correo">Correo:</form:label>
                                         <form:input type="email" path="Correo" class="form-control form-control-lg" placeholder="" />
@@ -60,31 +57,31 @@
                                         <label for="remember_me">Recordarme</label><span class="glyphicon glyphicon-info-sign"></span>
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-lg">Iniciar
-                                       </button>
-                                    </form:form>      
-        </div>
-        <div> </div>
-      </div>
-        
-        
-      
-      
-        
-       
-    
-    </div>
-  </div>
-</div>
-<button class="btn btn-primary btn-circle" id="to-top"><i class="fa fa-angle-up"></i></button>
-            
-            
-            
-            
-            
-            
-            
-            
-            
+                                    </button>
+                                </form:form>      
+                            </div>
+                            <div> </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-circle" id="to-top"><i class="fa fa-angle-up"></i></button>
+
+
+
+
+
+
+
+
+
         </div>        
     </body>      
 </html>

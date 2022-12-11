@@ -34,8 +34,8 @@ public class IngresarControlador {
 
     @RequestMapping(method = RequestMethod.POST)
     public ModelAndView Ingresar(
-            @ModelAttribute("Administrador") Administrador _admin, 
-            BindingResult result,HttpServletRequest req, HttpServletResponse resp)            
+            @ModelAttribute("Administrador") Administrador _admin,
+            BindingResult result, HttpServletRequest req, HttpServletResponse resp)
             throws Exception {
         ModelAndView mav = new ModelAndView();
 
@@ -47,14 +47,14 @@ public class IngresarControlador {
             if (result.hasErrors()) {
                 return new ModelAndView("Ingresar/Ingresar", "command", new Administrador());
             } else {
-                //test login!          
                 servicios.AdministradorWebService_Service service = new servicios.AdministradorWebService_Service();
                 servicios.AdministradorWebService cliente = service.getAdministradorWebServicePort();
                 Administrador Admin = cliente.administradorLogin(_admin.getCorreo(), _admin.getClave());
 
-                if (Admin != null) {                       
-                    req.getSession().setAttribute("Admin", Admin);  
-                    resp.addCookie(new Cookie("_sesion","true"));
+                //harcodeado para que Feli pueda ver las paginas privadas!!!
+                if (Admin != null || ("crea.27@gmail.com".equals(_admin.getCorreo()) && "12345".equals(_admin.getClave()))) {
+                    req.getSession().setAttribute("Admin", Admin);
+                    resp.addCookie(new Cookie("_sesion", "true"));
                     resp.sendRedirect(resp.encodeRedirectURL("AdministradorAltaPrestamo.htm"));
                     return null;
                 } else {
@@ -67,7 +67,5 @@ public class IngresarControlador {
             return mav;
         }
     }
-    
-    
 
 }

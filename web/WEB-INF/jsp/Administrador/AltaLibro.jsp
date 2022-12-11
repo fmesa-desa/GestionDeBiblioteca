@@ -35,7 +35,10 @@
                                 <form:errors path="Asignatura" element="div" class="alert alert-danger" />
                             </div> 
                         </div>
-                    </div>
+                    </div>                            
+                            
+                    <button type="submit" class="btn btn-primary btn-lg">Guardar&nbsp;&nbsp;
+                                        <i class="fa fa-save"></i></button>        
                 </form:form>                
             </div>            
         </div>
