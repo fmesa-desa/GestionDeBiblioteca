@@ -49,10 +49,19 @@
                     </div>                   
                 </div>
             </div>               
-            <%if (request.getAttribute("msje_error") != null) {
-            %>  <div class="alert alert-danger"><%=request.getAttribute("msje_error")%></div>   
-            <%} else if (request.getAttribute("msje") != null) {
-            %>  <div class="alert alert-info"><%=request.getAttribute("msje")%></div><%}%>              
+            <%
+    String Clase = "";String Msje = "";
+    if(request.getAttribute("msje_error")!=null){
+        Clase = "alert-danger";        
+        Msje = request.getAttribute("msje_error").toString();
+    }else if(request.getAttribute("msje")!=null){
+        Clase = "alert-success";        
+        Msje = request.getAttribute("msje").toString();
+    }
+%>
+<div class="alert <%=Clase%> text-center">
+    <strong><%=Msje%></strong>
+</div>              
         </div>
         <%@include file="../Principal/Footer.jspf" %>                
     </body>

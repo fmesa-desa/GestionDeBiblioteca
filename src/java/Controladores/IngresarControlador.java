@@ -5,6 +5,7 @@
 package Controladores;
 
 import Validadores.AdministradorValidar;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
@@ -34,8 +35,7 @@ public class IngresarControlador {
     @RequestMapping(method = RequestMethod.POST)
     public ModelAndView Ingresar(
             @ModelAttribute("Administrador") Administrador _admin, 
-            BindingResult result, SessionStatus status,
-            HttpServletRequest req, HttpServletResponse resp)
+            BindingResult result,HttpServletRequest req, HttpServletResponse resp)            
             throws Exception {
         ModelAndView mav = new ModelAndView();
 
@@ -53,7 +53,8 @@ public class IngresarControlador {
                 Administrador Admin = cliente.administradorLogin(_admin.getCorreo(), _admin.getClave());
 
                 if (Admin != null) {                       
-                    req.getSession().setAttribute("Admin", Admin);                    
+                    req.getSession().setAttribute("Admin", Admin);  
+                    resp.addCookie(new Cookie("_sesion","true"));
                     resp.sendRedirect(resp.encodeRedirectURL("AdministradorAltaPrestamo.htm"));
                     return null;
                 } else {

@@ -9,12 +9,10 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 import servicios.Libro;
 
-/** 
+/**
  * @author martin
  */
-
-
-public class LibroValidar implements Validator{
+public class LibroValidar implements Validator {
 
     @Override
     public boolean supports(Class<?> type) {
@@ -23,9 +21,12 @@ public class LibroValidar implements Validator{
 
     @Override
     public void validate(Object o, Errors errors) {
-        ValidationUtils.rejectIfEmpty(errors, "Asignatura", "required.Asignatura","El campo 'Asignatura' es obligatorio");
-        
+        if (((Libro) o).getAsignatura() == null) {
+            errors.rejectValue("Asignatura", "El campo 'Asignatura' es obligatorio");
+        }
+
+        ValidationUtils.rejectIfEmpty(errors, "Titulo", "required.Asignatura", "El campo 'Titulo' es obligatorio");
+
     }
-    
-    
+
 }
